@@ -1,3 +1,4 @@
+import type { Base } from './data/base';
 import getSymbols from './utils/getSymbols';
 import parseBase from './utils/parseBase';
 
@@ -10,7 +11,7 @@ class Converter {
   /**
    * Numeric base range supported [2-36]
    */
-  constructor(fromBase: number | string, toBase: number | string) {
+  constructor(fromBase: Base, toBase: Base) {
     this.fromBase = parseBase(fromBase);
     this.toBase = parseBase(toBase);
 

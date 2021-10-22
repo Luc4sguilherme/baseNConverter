@@ -34,6 +34,8 @@ const BASE_MAP = [
   ['tetratrige', 'tetratrigesimal', '34'],
   ['pentatrige', 'pentatrigesimal', '35'],
   ['hexatrige', 'hexatrigesimal', '36'],
-];
+] as const;
+
+export type Base = typeof BASE_MAP[number][number] | number;
 
 export default BASE_MAP;
